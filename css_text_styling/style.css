@@ -1,0 +1,45 @@
+/* selector of the document root, used for defining global variables */
+:root {
+	--serif-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* defining a variable */
+	--sans-serif-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* element selectors */
+body {
+	background-color: rgb(235, 235, 212);
+	font-family: var(--serif-family); /* using a variable */
+}
+h1 {
+	font-family: var(--sans-serif-family);
+}
+h2 {
+	padding: 0 2.5%; /* 0 padding vertically, 2.5% of container's (article tag's) width horizontally */
+	opacity: 75%; /* attempting to mimic somewhat faded ink */
+}
+h3 {
+	padding: 0 5%;
+	opacity: 65%;
+}
+p {
+	padding: 0 7.5%;
+	text-align: justify;
+	opacity: 55%;
+}
+
+/* class selectors */
+.obsolete {
+	text-decoration: line-through; /* strikethrough */
+	color: red;
+}
+.emphasis {
+	font-style: italic;
+}
+
+/* ID selectors */
+/* ID overrides p selector for specified properties */
+#siteAuthorsNote {
+	padding: 0 2.5%;
+	color: rgb(128, 128, 128);
+	opacity: 100%;
+	font-family: var(--sans-serif-family);
+}
