@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Wiki - OpenExonaut</title>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <noscript> <!-- A tag which instructs the engine to not process what is inside unless JavaScript is not available -->
+            <link rel="stylesheet" href="./css/noscript-handling.css"> <!-- As such, this sheet is not loaded unless JavaScript is not available -->
+        </noscript>
+    </head>
+    <body>
+        <nav> <!-- see blog/in-game.html for comments about the navbar -->
+            <ul>
+                <li>
+                    <a href="./">
+                        <img alt="[Small logo]" src="./img/logo/small_logo.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="./blog.html">Blog</a>
+                </li>
+                <li>
+                    <strong><a href="./wiki.html">Wiki</a></strong>
+                </li>
+                <li>
+                    <a href="./leaderboards.html">Leaderboards</a>
+                </li>
+                <li>
+                    <a href="#" onclick="alert('This would have lead to the server software\'s GitHub repo, whose link has been excised for the assignment\'s self-containment.')">GitHub</a>
+                </li>
+                <li>
+                    <a href="#" onclick="alert('This would have lead to a Discord server around the hosted instance of the server software, whose link has been excised for the assignment\'s self-containment (and also because it does not exist yet).')">Discord</a>
+                </li>
+            </ul>
+        </nav>
+        <article>
+            <h1>Wiki</h1>
+            <noscript>
+                <p>Sorry. The wiki requires JavaScript to fetch and process the live stat data.</p> <!-- Not this specific page, mind you, but it feels right to filter early -->
+            </noscript>
+            <section class="require-js"> <!-- section is syntactic sugar for a piece of a whole -->
+                <a href="./exosuits.html">
+                    <div> <!-- div defines a containing rectangle -->
+                        <img alt="[Phantom icon]" src="./img/exosuits/phantom.png">
+                        <h4>Exosuits</h4>
+                    </div>
+                </a>
+                <a href="./weapons.html">
+                    <div>
+                        <img alt="[Bulldog icon]" src="./img/weapons/bulldog.png">
+                        <h4>Weapons</h4>
+                    </div>
+                </a>
+            </section>
+        </article>
+        <footer> <!-- syntactic sugar for an independent group of information on the bottom -->
+            <p>Copyright 2025 OpenExonaut contributors.</p>
+            <p>Project Exonaut, its game assets, and its characters copyright 2011- Cartoon Network</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>We get in game - Blog - OpenExonaut</title>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav> <!-- syntactic sugar for a navigation section -->
+            <ul> <!-- unordered list: populates entries with bulletpoints or other indicators of order not mattering -->
+                <li> <!-- list element -->
+                    <a href="../"> <!-- link; the .. is an instruction to go back a directory, and the lack of a filename implies index.html -->
+                        <img alt="[Small logo]" src="../img/logo/small_logo.png"> <!-- src is path to image to use, alt is what to show if loading the image is not attempted or fails -->
+                    </a>
+                </li>
+                <li>
+                    <strong><a href="../blog.html">Blog</a></strong> <!-- strong (bolding with semantic significance) used as "you are here" indicator, here applies only to alt-text -->
+                </li>
+                <li>
+                    <a href="../wiki.html">Wiki</a>
+                </li>
+                <li>
+                    <a href="../leaderboards.html">Leaderboards</a>
+                </li>
+                <li>
+                    <a href="#" onclick="alert('This would have lead to the server software\'s GitHub repo, whose link has been excised for the assignment\'s self-containment.')">GitHub</a> <!-- "#" specifies to go nowhere in particular; this null target allows satisfying the occasional expectation of anchors having an href to be clickable; onclick fires script when clicked, in this case a rudimentary (since it'll be replaced eventually) pop-up -->
+                </li>
+                <li>
+                    <a href="#" onclick="alert('This would have lead to a Discord server around the hosted instance of the server software, whose link has been excised for the assignment\'s self-containment (and also because it does not exist yet).')">Discord</a><!-- \' inside the alert is needed to instruct the script engine that the ' character was not meant to end the string -->
+                </li>
+            </ul>
+        </nav>
+        <article> <!-- syntactic sugar for a group of information that should be treated as a whole -->
+            <h1>We get in game</h1>
+
+            <h5><i>Written by </i>SNBeast<i> on </i>February 6<sup>th</sup>, 2025<i>.</i></h5> <!-- i tag is italicization with no semantic significance, sup tag is superscript -->
+
+            <p>I have to confess to two small errors of premise right out of the gate:</p>
+
+            <ol> <!-- ordered list: populates entries with numbers or other indicators of order mattering -->
+                <li>In the title I am guilty of using the royal plural: I am currently working alone.</li>
+                <li>I have reached in-game status about six months ago.</li>
+            </ol>
+
+            <p>Regarding the latter, the delay to this point has been primarily due to schoolwork and other more pressing matters, but also due to the jankiness of the former setup.</p>
+
+            <p>Said former setup involved:</p>
+
+            <aside> <!-- syntactic sugar for information which typically gets sidelined -->
+                <img alt="[Two players facing each other]" src="../img/blogs/in-game/players.png">
+            </aside>
+
+            <ul>
+                <li>A compiled standalone C# program which serves a basic crossdomain socket policy.</li>
+                <li>An nginx server servicing the original webpage and static files out of an extracted Flashpoint curation.</li>
+                <li>The same nginx instance using path and port remapping shenanigans to also serve Flashpoint's archived responses to the dynamic HTTP endpoints.</li>
+                <li>Editing the hosts file on all connecting machines so the website doesn't break.</li>
+                <li>A SmartFoxServer 2X instance running the extension jars, which in turn...</li>
+                <li>Were compiled, packed, and placed using a batch script...</li>
+                <li>With the source files being written on a different machine and copied via a USB stick.</li>
+            </ul>
+
+            <p>This is not a sane way to go about it: getting all the server software running in a needed manner involved hacky configurations, the HTTP server would not scale past needing to feed static responses to dynamic endpoints (like login and progress information!), and the socket policy software might not run on a Linux server in a lightweight manner. So I had to take a break and look at what others were doing.</p>
+
+            <p>Project Exonaut is far from the only multiplayer MMO-like game made by Cartoon Network. I had already been vaguely been familiar with OpenFusion for FusionFall from its rather unique inclusion in Flashpoint: the game cannot be played without the server software, but the server can be run in effectively a singleplayer mode due to being a proper asynchronous MMO. The OpenFusion software is not helpful for my purposes, since it handles custom protocols instead of SmartFoxServer 2X and HTTP, but I took a look at what some of its contributors were up to and came upon CakeLancelot's work. CakeLancelot has also worked on software for FusionFall Heroes (HeroesExtension) and Adventure Time Battle Party (OpenATBP). Both contained SmartFoxServer 2X extension code, so they seemed like good leads.</p>
+
+            <p>The latter was especially promising, looking like it was recently rather active. I therefore joined the OpenATBP Discord, read through the news channel, and found that only a month prior, they had entered open beta with a dedicated server instance.</p>
+
+            <p>As such, I started poring over server source project, and saw that it would be a good base. Instead of the above mess, the repository consisted of:</p>
+
+            <ul>
+                <li>A SmartFoxServer 2X extension's source and Gradle build script.</li>
+                <li>A single runnable NodeJS project which spawns:</li>
+                <li style="list-style-type: none;"> <!-- "list-style-type: none" is an instruction not to render a bullet point, used since otherwise (at least on Firefox) the first list element of the nested list would have two bullet points -->
+                    <ul>
+                        <li>An Express server which both serves the static files and dynamic responses to the dynamic HTTP queries.</li>
+                        <li>A custom server which serves a customizable socket policy file.</li>
+                    </ul>
+                </li>
+                <li>Example configuration files for the game's server configuration queries and debug features.</li>
+            </ul>
+
+            <p>So I created a new repository, whose first commit was a checkout of the present state of OpenATBP. Lest you think that this task would be some trivial derivation, it bears pointing out a few differences between Adventure Time Battle Party (ATBP) and Project Exonaut (PE):</p>
+
+            <ul>
+                <li>The SmartFoxServer 2X extension for ATBP is a monolithic zone extension which handles running each room, whereas the extensions for PE are split between a room extension and a zone extension (and necessarily a library extension to make passing objects between the two work due to class loading shenanigans).</li>
+                <li>ATBP matchmaking is handled using a custom HTTP server, whereas PE matchmaking is handled by the SmartFoxServer 2X zone extension.</li>
+                <li>ATBP takes place on the non-gravitational axes, whereas PE includes the gravitational axis and as such has to contend with gravity and terminal velocity.</li>
+                <li>ATBP gameplay is generally processed server-side, whereas PE uses parallel server-side and client-side processing. As such, PE relies more on what the clients claim about the game state and in tandem with the genre difference requires more careful physics mimicry.</li>
+            </ul>
+
+            <p>As the project currently stands, the HTTP server fulfills basic functionality and it is the SmartFoxServer 2X extensions which is in desperate need of work. I am currently exploring routes to make collision work.</p>
+        </article>
+        <footer> <!-- syntactic sugar for an independent group of information on the bottom -->
+            <p>Copyright 2025 OpenExonaut contributors.</p>
+
+            <p>Project Exonaut, its game assets, and its characters copyright 2011- Cartoon Network</p>
+        </footer>
+    </body>
+</html>
