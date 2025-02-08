@@ -1,0 +1,81 @@
+/* 
+   Stylesheet for HTML & CSS Beginner's Tutorial
+   This file controls the appearance of the webpage.
+*/
+
+/* General Page Styles */
+body {
+    background-color: #f4f4f4; /* Sets a light gray background color */
+    font-family: Arial, sans-serif; /* Uses a clean, readable font */
+    line-height: 1.6; /* Increases line spacing for better readability */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    color: #333; /* Sets text color to dark gray */
+}
+
+/* Header Styling */
+header {
+    background: #333; /* Dark background color */
+    color: white; /* White text for contrast */
+    text-align: center; /* Centers the text */
+    padding: 20px; /* Adds space around content */
+}
+
+/* Navigation Menu */
+nav {
+    background: #444; /* Slightly lighter dark background */
+    padding: 10px; /* Adds spacing around menu */
+}
+
+nav ul {
+    list-style: none; /* Removes default bullet points */
+    text-align: center; /* Centers the navigation menu */
+    padding: 0; /* Removes default padding */
+}
+
+nav ul li {
+    display: inline; /* Displays menu items in a row */
+    margin: 0 15px; /* Adds space between menu items */
+}
+
+nav ul li a {
+    color: white; /* White text */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Makes text bold */
+}
+
+/* Hover Effect - Inverts Colors */
+nav ul li a:hover {
+    background-color: white; /* Changes background to white */
+    color: #444; /* Changes text color to dark gray */
+    padding: 5px; /* Adds slight padding to enhance effect */
+    border-radius: 3px; /* Rounds the edges for a subtle effect */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Section Styles */
+section {
+    max-width: 800px; /* Limits the width of the content */
+    margin: 20px auto; /* Centers content horizontally */
+    padding: 20px; /* Adds spacing inside sections */
+    background: white; /* White background for contrast */
+    border-radius: 8px; /* Rounds the corners slightly */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a light shadow */
+}
+
+/* Styling for Code Blocks */
+pre {
+    background: #eee; /* Light gray background for code */
+    padding: 10px; /* Adds spacing inside */
+    border-radius: 5px; /* Rounds the edges */
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    font-family: monospace; /* Uses a fixed-width font for code */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center; /* Centers the text */
+    padding: 15px; /* Adds space inside footer */
+    background: #333; /* Dark background */
+    color: white; /* White text */
+}

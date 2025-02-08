@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 for proper text display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>HTML & CSS Beginner's Tutorial</title> <!-- Sets the title of the webpage -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links the external CSS file for styling -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to HTML & CSS Beginner's Tutorial</h1> <!-- Main heading of the page -->
+        <p>Learn the basics of web development step by step.</p> <!-- Brief introduction text -->
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#html-basics">HTML Basics</a></li> <!-- Link to HTML Basics section -->
+            <li><a href="#css-basics">CSS Basics</a></li> <!-- Link to CSS Basics section -->
+            <li><a href="#example">Example Code</a></li> <!-- Link to Example Code section -->
+        </ul>
+    </nav>
+
+    <!-- HTML Basics Section -->
+    <section id="html-basics">
+        <h2>HTML Basics</h2> <!-- Section heading -->
+        <p>HTML (HyperText Markup Language) is the foundation of web pages.</p>
+        <ul>
+            <li>Elements are written with tags like <code>&lt;p&gt;</code> for paragraphs.</li>
+            <li>Most elements require a closing tag, e.g., <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code>.</li>
+            <li>Some elements, like <code>&lt;img&gt;</code>, are self-closing.</li>
+            <li>Attributes provide additional information about elements, e.g., <code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code>.</li>
+        </ul>
+    </section>
+
+    <!-- CSS Basics Section -->
+    <section id="css-basics">
+        <h2>CSS Basics</h2>
+        <p>CSS (Cascading Style Sheets) is used to style web pages.</p>
+        <ul>
+            <li>CSS can be written in a separate file and linked in HTML.</li>
+            <li>It styles elements using selectors like <code>p { color: blue; }</code>.</li>
+            <li>Example: <code>body { background-color: #f4f4f4; }</code></li>
+        </ul>
+    </section>
+
+    <!-- Example Code Section -->
+    <section id="example">
+        <h2>Example Code</h2>
+        <p>Below is a simple HTML & CSS example:</p>
+        
+        <h3>HTML:</h3>
+        <pre>
+&lt;!DOCTYPE html&gt;  &lt;!-- Defines the document type as HTML5 --&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;  &lt;!-- Ensures proper text encoding --&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt; &lt;!-- Sets the page title --&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;  &lt;!-- Links the external CSS file --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;  &lt;!-- Main heading of the page --&gt;
+    &lt;p&gt;This is a simple webpage styled with CSS.&lt;/p&gt;  &lt;!-- Paragraph of text --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+
+        <h3>CSS:</h3>
+        <pre>
+/* Simple CSS styling */
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    text-align: center; /* Centers text content */
+}
+
+h1 {
+    color: #333; /* Dark gray text */
+    font-size: 36px; /* Larger heading */
+}
+
+p {
+    font-size: 18px; /* Readable text size */
+    color: #555; /* Medium gray text */
+}
+        </pre>
+
+        <h3>How to Run the Example:</h3>
+        <ol>
+            <li>Copy and paste the HTML code into a new file named <code>index.html</code>.</li>
+            <li>Copy and paste the CSS code into a new file named <code>styles.css</code>.</li>
+            <li>Ensure both files are in the same folder.</li>
+            <li>Open <code>index.html</code> in a web browser.</li>
+        </ol>
+
+        <h3>Explore Further:</h3>
+        <p>Right-click the webpage and select <strong>View Page Source</strong> to inspect the HTML.</p>
+        <p>Use the browser's developer tools (F12 or right-click > Inspect) to explore the CSS styles.</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Happy Coding! &copy; 2025</p> <!-- Footer text with copyright information -->
+    </footer>
+
+</body>
+</html>
