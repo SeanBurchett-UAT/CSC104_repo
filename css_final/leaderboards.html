@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Leaderboards - OpenExonaut</title>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./css/common.css">
+
+        <noscript> <!-- A tag which instructs the engine to not process what is inside unless JavaScript is not available -->
+            <link rel="stylesheet" href="./css/noscript-handling.css"> <!-- As such, this sheet is not loaded unless JavaScript is not available -->
+        </noscript>
+    </head>
+    <body>
+        <header> <!-- see blog/in-game.html for comments about the header -->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./">
+                            <img alt="[Small logo]" src="./img/logo/small_logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="./wiki.html">Wiki</a>
+                    </li>
+                    <li>
+                        <strong><a href="./leaderboards.html">Leaderboards</a></strong>
+                    </li>
+                    <li>
+                        <a href="#" onclick="alert('This would have lead to the server software\'s GitHub repo, whose link has been excised for the assignment\'s self-containment.')">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="alert('This would have lead to a Discord server around the hosted instance of the server software, whose link has been excised for the assignment\'s self-containment (and also because it does not exist yet).')">Discord</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article> <!-- syntactic sugar for a group of information that should be treated as a whole -->
+            <h1>Leaderboards</h1>
+            <noscript>
+                <p>Sorry. The leaderboards require JavaScript to fetch and process the live leaderboard data.</p> <!-- Well, not yet. That functionality doesn't exist yet in the server software. -->
+            </noscript>
+            <div class="require-js"> <!-- div defines a containing rectangle -->
+                <!-- yeah, this data's made up and probably not viable -->
+                <section>
+                    <h3>Teams</h3>
+                    <p>Current top faction: <b>Banzai Squadron</b></p>
+                    <table> <!-- begins a table formatting -->
+                        <caption>Faction Stats</caption>
+                        <thead>
+                            <tr> <!-- begins a new table row formatting -->
+                                <th scope="col">Metric</th> <!-- table element to be treated as heading -->
+                                <th scope="col">Atlas</th>
+                                <th scope="col">Banzai</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Battle Wins</td> <!-- table data -->
+                                <td>104</td>
+                                <td><b>129</b></td> <!-- b is bolding with no semantic significance -->
+                            </tr>
+                            <tr>
+                                <td>Team Battle Wins</td>
+                                <td>63</td>
+                                <td><b>78</b></td>
+                            </tr>
+                            <tr>
+                                <td>Credits</td>
+                                <td>38103</td>
+                                <td><b>41034</b></td>
+                            </tr>
+                            <tr>
+                                <td>Total hacks</td>
+                                <td>3014</td>
+                                <td><b>3278</b></td>
+                            </tr>
+                            <tr>
+                                <td>Total exosuits</td>
+                                <td>43</td>
+                                <td><b>49</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3>Active Players</h3>
+                    <table>
+                        <caption>Player Stats</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Rank</th>
+                                <th scope="col">Player Name</th>
+                                <th scope="col">Faction</th>
+                                <th scope="col">Current Exosuit</th>
+                                <th scope="col">Level</th>
+                                <th scope="col">Hacks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Omega Lul</td>
+                                <td>Atlas</td>
+                                <td>Rath</td>
+                                <td>37</td>
+                                <td>301</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Kerfuffle</td>
+                                <td>Banzai</td>
+                                <td>Marceline</td>
+                                <td>35</td>
+                                <td>289</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Brad Isaac</td>
+                                <td>Banzai</td>
+                                <td>SamJack</td>
+                                <td>35</td>
+                                <td>274</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Giodude</td>
+                                <td>Atlas</td>
+                                <td>Agent Six</td>
+                                <td>34</td>
+                                <td>270</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>SNBeast</td>
+                                <td>Banzai</td>
+                                <td>Marceline</td>
+                                <td>33</td>
+                                <td>261</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Ocean Man</td>
+                                <td>Banzai</td>
+                                <td>SamJack</td>
+                                <td>32</td>
+                                <td>256</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>IT'S JOHN CENA</td>
+                                <td>Atlas</td>
+                                <td>Phantom</td>
+                                <td>30</td>
+                                <td>235</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>White Whale</td>
+                                <td>Atlas</td>
+                                <td>Rath</td>
+                                <td>28</td>
+                                <td>223</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Holy Grail</td>
+                                <td>Atlas</td>
+                                <td>Grim</td>
+                                <td>27</td>
+                                <td>219</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Quick Nine</td>
+                                <td>Banzai</td>
+                                <td>Skips</td>
+                                <td>26</td>
+                                <td>214</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </article>
+        <footer> <!-- syntactic sugar for an independent group of information on the bottom -->
+            <p>Copyright 2025 OpenExonaut contributors.</p>
+            <p>Project Exonaut, its game assets, and its characters copyright 2011- Cartoon Network</p>
+        </footer>
+    </body>
+</html>

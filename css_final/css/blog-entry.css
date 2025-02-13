@@ -1,0 +1,21 @@
+/*
+    CSS meant to only be loaded for blog entries
+*/
+
+/*
+    Undo the text-align set by the common CSS
+*/
+article {
+    text-align: initial;
+}
+
+/*
+    Redo the text-align for the headings
+*/
+h1 {
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+}

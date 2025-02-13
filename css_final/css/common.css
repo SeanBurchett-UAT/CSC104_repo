@@ -1,0 +1,167 @@
+html {
+    height: 100%; /* helps in ensuring the footer floats to the bottom */
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    background-color: rgb(16, 16, 16);
+    color: rgb(224, 224, 224);
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* flex stuff primarily just to get the footer to be at the bottom */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%; /* please take up the whole width. */
+    background-color: rgb(48, 48, 48);
+}
+
+nav ul {
+    list-style-type: none; /* get rid of li discs */
+    margin: 0; /* ul's default margins causes a white stripe at the top */
+    padding: 0; /* ul also has default padding that needs to go */
+    display: flex; /* let the browser adjust spacing for us */
+    justify-content: center; /* center the elements with their required space, and leave space outside them */
+    align-items: center; /* center the nav links */
+}
+
+nav ul li a {
+    display: block; /* turn into block elements so properties get respected */
+    padding: 12px;
+    color: rgb(224, 224, 224);
+    text-decoration: none; /* remove default underline */
+}
+
+/*
+    opaque stuff used to clean up after the nav, as is for some reason necessary
+*/
+nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+article {
+    width: 100% - 20px;
+    margin: 20px;
+}
+
+/*
+    has selector: matching elements which have matching input elements as descendants
+*/
+section:has(hgroup) {
+    display: flex;
+    flex-wrap: wrap; /* enable causing elements which don't fit to be placed on a new line */
+    justify-content: center;
+}
+
+main:has(section) {
+    display: grid;
+    grid: auto auto / auto auto; /* two rows and two columns of automatic width */
+    grid-auto-flow: column;
+}
+
+/*
+    screens whose width is at most 45 font-sizes
+*/
+@media (max-width: 45em) {
+    main:has(section) {
+        grid: auto auto auto auto / auto; /* four rows and one column, automatic size */
+    }
+}
+
+a:has(hgroup) {
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+}
+
+hgroup {
+    background-color: rgb(64, 64, 64);
+    border-radius: 20px; /* curve the corners */
+    margin: 10px;
+    padding: 10px;
+}
+
+hgroup img {
+    margin: 10px;
+}
+
+hgroup h4 {
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: rgb(48, 48, 48);
+    width: 100%;
+    font-style: italic;
+}
+
+aside {
+    float: right;
+}
+
+table {
+    border-collapse: collapse; /* consolidate adjacent borders */
+    border: 1px solid rgb(224, 224, 224);
+    margin: auto; /* float to center */
+}
+
+table caption {
+    padding: 10px;
+}
+
+th, td {
+    padding: 5px;
+}
+
+/*
+    select only th next to another th or td next to another td
+*/
+th + th, td + td {
+    border-left: 1px solid rgb(224, 224, 224);
+}
+
+thead tr {
+    border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+/*
+    select only odd tr within a tbody
+*/
+tbody tr:nth-child(odd) {
+    background-color: rgb(48, 48, 48);
+}
+
+.banzai {
+    box-shadow: 0 0 10px orange;
+    border: 1px solid orange;
+}
+
+.atlas {
+    box-shadow: 0 0 10px green;
+    border: 1px solid green;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(255, 224, 0);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer; /* make any mouse cursor hovering over it a pointer */
+    font-weight: bold;
+}
+
+/*
+    select a button being moused over
+*/
+button:hover {
+    background-color: rgb(224, 192, 0);
+}
