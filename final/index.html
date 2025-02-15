@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>OpenExonaut</title>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./css/common.css">
+    </head>
+    <body>
+        <header> <!-- see blog/in-game.html for comments about the header -->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html">
+                            <strong><img alt="[Small logo]" src="./img/logo/small_logo.png"></strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="./wiki.html">Wiki</a>
+                    </li>
+                    <li>
+                        <a href="./leaderboards.html">Leaderboards</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="alert('This would have lead to the server software\'s GitHub repo, whose link has been excised for the assignment\'s self-containment.')">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="alert('This would have lead to a Discord server around the hosted instance of the server software, whose link has been excised for the assignment\'s self-containment (and also because it does not exist yet).')">Discord</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <img alt="[Big logo]" src="./img/logo/exonaut_logo.png">
+            <form> <!-- hack to enable a functional link on a button without script (eventually, for now the link is script) or double-hovering the button when tabbing -->
+                <button formaction="javascript:alert('This%20would%20have%20downloaded%20the%20dedicated%20client%20for%20the%20hosted%20instance%20of%20the%20server%20software,%20whose%20link%20has%20been%20excised%20for%20the%20assignment\'s%20self-containment%20(and%20also%20because%20it%20does%20not%20exist%20yet).')"> <!-- this is a URL (using the javascript label to be interpreted as script), so spaces have to be encoded to %20 -->
+                    <img alt="[Windows logo]" src="./img/logo/windows-icon.png">
+                    <span>Download</span>
+                </button>
+            </form>
+            <h1>OpenExonaut - Rejoin the Battle</h1>
+        </main>
+        <footer> <!-- syntactic sugar for an independent group of information on the bottom -->
+            <p>Copyright 2025 OpenExonaut contributors.</p>
+            <p>Project Exonaut, its game assets, and its characters Copyright 2011 - Cartoon Network</p>
+        </footer>
+    </body>
+</html>

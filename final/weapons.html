@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Base Weapons - OpenExonaut</title>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./css/common.css">
+
+        <noscript> <!-- A tag which instructs the engine to not process what is inside unless JavaScript is not available -->
+            <link rel="stylesheet" href="./css/noscript-handling.css"> <!-- As such, this sheet is not loaded unless JavaScript is not available -->
+        </noscript>
+        <script src="./js/load-data.js"></script>
+        <script src="./js/weapons.js"></script>
+    </head>
+    <body>
+        <header> <!-- see blog/in-game.html for comments about the header -->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html">
+                            <img alt="[Small logo]" src="./img/logo/small_logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <strong><a href="./wiki.html">Wiki</a></strong>
+                    </li>
+                    <li>
+                        <a href="./leaderboards.html">Leaderboards</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="alert('This would have lead to the server software\'s GitHub repo, whose link has been excised for the assignment\'s self-containment.')">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="alert('This would have lead to a Discord server around the hosted instance of the server software, whose link has been excised for the assignment\'s self-containment (and also because it does not exist yet).')">Discord</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Base Weapons</h1>
+            <noscript>
+                <p>Sorry. The wiki requires JavaScript to fetch and process the live stat data.</p>
+            </noscript>
+            <div class="require-js">
+                <section>
+                    <a href="#weapon-name" style="display: none;" id="weapon-template"> <!-- hidden button template; navigates to element id "weapon-name" -->
+                        <img alt="[TEMPLATE NAME icon]" src="./img/weapons/TEMPLATE.jpg">
+                        <h4>TEMPLATE NAME</h4>
+                    </a>
+                </section>
+                <article style="display: none;"> <!-- hidden weapon data until loaded -->
+                    <h3 id="weapon-name">TEMPLATE NAME</h3>
+                    <img id="weapon-image" alt="[TEMPLATE NAME icon]" src="./img/weapons/TEMPLATE.jpg">
+                    <p id="weapon-description">TEMPLATE DESCRIPTION</p>
+                    <table> <!-- begins a new table formatting -->
+                        <caption>Weapon Stats</caption>
+                        <thead>
+                            <tr> <!-- begins a new table row formatting -->
+                                <th scope="col">Stat</th> <!-- table element to be treated as heading -->
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Projectile type</td> <!-- table data -->
+                                <td id="weapon-projectile-type">TEMPLATE PROJECTILE TYPE</td>
+                            </tr>
+                            <tr>
+                                <td>Projectiles per fire</td>
+                                <td id="weapon-projectiles-per-fire">TEMPLATE PROJECTILES PER FIRE</td>
+                            </tr>
+                            <tr>
+                                <td>Projectiles' spread</td>
+                                <td id="weapon-projectiles-spread">TEMPLATE PROJECTILES' SPREAD</td>
+                            </tr>
+                            <tr>
+                                <td>Clip size</td>
+                                <td id="weapon-clip-size">TEMPLATE CLIP SIZE</td>
+                            </tr>
+                            <tr>
+                                <td>Clip count</td>
+                                <td id="weapon-clip-count">TEMPLATE CLIP COUNT</td>
+                            </tr>
+                            <tr>
+                                <td>Fire rate</td>
+                                <td id="weapon-fire-rate">TEMPLATE FIRE RATE</td>
+                            </tr>
+                            <tr>
+                                <td>Reload rate</td>
+                                <td id="weapon-reload-rate">TEMPLATE RELOAD RATE</td>
+                            </tr>
+                            <tr>
+                                <td>Range</td>
+                                <td id="weapon-range">TEMPLATE RANGE</td>
+                            </tr>
+                            <tr>
+                                <td>Accuracy</td>
+                                <td id="weapon-accuracy">TEMPLATE ACCURACY</td>
+                            </tr>
+                            <tr>
+                                <td>Damage per projectile</td>
+                                <td id="weapon-damage-per-projectile">TEMPLATE DAMAGE PER PROJECTILE</td>
+                            </tr>
+                            <tr>
+                                <td>First explosion radius</td>
+                                <td id="weapon-first-explosion-radius">TEMPLATE FIRST EXPLOSION RADIUS</td>
+                            </tr>
+                            <tr>
+                                <td>First explosion radius damage</td>
+                                <td id="weapon-first-explosion-radius-damage">TEMPLATE FIRST EXPLOSION RADIUS DAMAGE</td>
+                            </tr>
+                            <tr>
+                                <td>Second explosion radius</td>
+                                <td id="weapon-second-explosion-radius">TEMPLATE SECOND EXPLOSION RADIUS</td>
+                            </tr>
+                            <tr>
+                                <td>Second explosion radius damage</td>
+                                <td id="weapon-second-explosion-radius-damage">TEMPLATE SECOND EXPLOSION RADIUS DAMAGE</td>
+                            </tr>
+                            <tr>
+                                <td>Time to detonate</td>
+                                <td id="weapon-time-to-detonate">TEMPLATE TIME TO DETONATE</td>
+                            </tr>
+                            <tr>
+                                <td>Velocity</td>
+                                <td id="weapon-velocity">TEMPLATE VELOCITY</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </div>
+        </main>
+        <footer> <!-- syntactic sugar for an independent group of information on the bottom -->
+            <p>Copyright 2025 OpenExonaut contributors.</p>
+            <p>Project Exonaut, its game assets, and its characters Copyright 2011 - Cartoon Network</p>
+        </footer>
+    </body>
+</html>

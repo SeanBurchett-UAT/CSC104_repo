@@ -1,0 +1,21 @@
+/*
+    CSS meant to only be loaded for blog entries
+*/
+
+body {
+    background-image: url('../img/background.png');
+}
+
+/*
+    Undo the text-align set by the common CSS
+*/
+main {
+    text-align: initial;
+}
+
+/*
+    Redo the text-align for the headings
+*/
+h1, h5 {
+    text-align: center;
+}

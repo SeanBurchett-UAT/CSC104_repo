@@ -1,0 +1,12 @@
+/*
+    A class which is used to mimic an inversion of the noscript tag.
+    Semantically there is an important difference though: this is an instruction not to draw the tag and its contents,
+    whereas noscript is an instruction to not even process the inside tags.
+*/
+.require-js {
+    /*
+        do not render this element or its children,
+        and give this setting precedence over more specific rules
+    */
+    display: none !important;
+}
